@@ -1616,7 +1616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1732766984
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1657,6 +1657,8 @@ MonoBehaviour:
     - Yes? Thats the person you are going to kill
     - No you heard me correctly, you are going to kill them. Why, you might ask.
       Well its their time to go...
+  Player: {fileID: 0}
+  triggered: 0
 --- !u!114 &1732766986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1664,7 +1666,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732766983}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -1720,7 +1722,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732766983}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -2032,6 +2034,7 @@ GameObject:
   - component: {fileID: 2020695975}
   - component: {fileID: 2020695974}
   - component: {fileID: 2020695976}
+  - component: {fileID: 2020695977}
   m_Layer: 0
   m_Name: Square
   m_TagString: Ground
@@ -2132,6 +2135,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2020695977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020695973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d3039751a45e894dafd42d6e432ddc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Mysterious voice
+    sentences:
+    - Hi...
+    - Did you know you can use the arrow keys to move? And spacebar to jump?
+    - Try to get to the other side of this gap now, goodluck!
+  Player: {fileID: 2098953909}
+  triggered: 0
 --- !u!1 &2028346355
 GameObject:
   m_ObjectHideFlags: 0
@@ -2143,6 +2166,7 @@ GameObject:
   - component: {fileID: 2028346357}
   - component: {fileID: 2028346356}
   - component: {fileID: 2028346358}
+  - component: {fileID: 2028346359}
   m_Layer: 0
   m_Name: Square (2)
   m_TagString: Ground
@@ -2243,6 +2267,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2028346359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028346355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d3039751a45e894dafd42d6e432ddc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Mysterious voice
+    sentences:
+    - Good job!
+    - Now do you see this person?
+    - Try to step on them and press *key*
+  Player: {fileID: 2098953909}
+  triggered: 0
 --- !u!1 &2098953909
 GameObject:
   m_ObjectHideFlags: 0
@@ -2275,8 +2319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad067380028c754b9187bd5eb803912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 700
-  jump: 40000
+  speed: 350
+  jump: 10000
   isJumping: 0
 --- !u!50 &2098953911
 Rigidbody2D:
@@ -2293,7 +2337,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 300
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2385,7 +2429,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098953909}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 194.3473, y: 178.6607, z: 0}
+  m_LocalPosition: {x: 193, y: 230, z: 0}
   m_LocalScale: {x: 5.171469, y: 4.8132973, z: 0.20128824}
   m_ConstrainProportionsScale: 1
   m_Children: []
