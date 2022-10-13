@@ -13,6 +13,8 @@ public class Movement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private Transform player;
 
     // Start is called before the first frame update
     void Start()
@@ -49,12 +51,21 @@ public class Movement : MonoBehaviour
 
     private void Flip()
     {
+        int LayerEnemy = LayerMask.NameToLayer("Enemy");
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
         {
+            Vector3 temp = player.position;
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
+            if (!(gameObject.layer == LayerEnemy)) {
+              if (isFacingRight) {
+                player.position = temp - new Vector3(-2,0,0);
+              } else {
+                player.position = temp - new Vector3(2,0,0);
+              }
+            }
         }
     }
 }

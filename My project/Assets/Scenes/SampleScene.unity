@@ -528,9 +528,9 @@ MonoBehaviour:
     name: Mysterious Voice
     sentences:
     - Hi again!
-    - You are to possess that person over there!
+    - You are going to possess that person over there!
     - Stand next to them and press F
-    - Then try and find a way to fill this person
+    - Then try and find a way to kill this person
   Player: {fileID: 793932292}
   triggered: 0
 --- !u!1 &68319726
@@ -1966,6 +1966,10 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  player: {fileID: 536167341}
 --- !u!95 &536167343
 Animator:
   serializedVersion: 4
@@ -2464,6 +2468,10 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  player: {fileID: 793932296}
 --- !u!1 &808251337
 GameObject:
   m_ObjectHideFlags: 0
