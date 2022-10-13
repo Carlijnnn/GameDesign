@@ -7,10 +7,10 @@ public class Overtaking : MonoBehaviour
     [SerializeField] private Transform enemyCheck;
     [SerializeField] private LayerMask enemyLayer;
     public GameObject enemy;
+    public GameObject camera;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -20,6 +20,7 @@ public class Overtaking : MonoBehaviour
         if (EnemyAvailable() && Input.GetKeyDown(KeyCode.F))
         {
             enemy.GetComponent<Movement>().active = true;
+            camera.GetComponent<CameraFollow>().target = enemy;
             GetComponent<Movement>().active = false;
         }
         
