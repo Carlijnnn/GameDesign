@@ -19,8 +19,9 @@ public class FinishLine : MonoBehaviour
 
         private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if(other.gameObject.tag == "Player")
         {
+            Debug.Log("Loading next level");
             SceneManager.LoadScene("level2");
         }
     }
