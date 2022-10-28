@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level2.unity
     guid: adbcf09c46ce6eb419ef6ff893c1a883
+  - enabled: 0
+    path: Assets/Scenes/parallax.unity
+    guid: 4c774af29a8019146a5c2ce37c923623
+  - enabled: 1
+    path: Assets/Scenes/DropDownLevel.unity
+    guid: 586bfe6c94936b241acfee9a528b9b4d
   m_configObjects: {}
