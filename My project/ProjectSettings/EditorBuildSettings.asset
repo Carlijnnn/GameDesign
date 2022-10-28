@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DropDownLevel.unity
     guid: 586bfe6c94936b241acfee9a528b9b4d
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: dcb507272b12e3f4e9042a605698fbd9
   m_configObjects: {}

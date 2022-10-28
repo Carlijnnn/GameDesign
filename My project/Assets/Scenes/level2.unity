@@ -1476,7 +1476,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &348889822
 Transform:
   m_ObjectHideFlags: 0
@@ -1688,7 +1688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &458350705
 Animator:
   serializedVersion: 4
@@ -6628,6 +6628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 024064764de315543a3eccdd43e4751c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scene: Ending
 --- !u!61 &1510769439
 BoxCollider2D:
   m_ObjectHideFlags: 0

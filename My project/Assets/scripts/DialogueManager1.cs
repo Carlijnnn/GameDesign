@@ -56,9 +56,6 @@ public class DialogueManager1 : MonoBehaviour
             dialogueText.text += letter;
             yield return null;
             yield return null;
-            yield return null;
-            yield return null;
-
         }
     }
 

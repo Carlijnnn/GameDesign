@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class FinishLine : MonoBehaviour
 {
+    public string scene;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,7 @@ public class FinishLine : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             Debug.Log("Loading next level");
-            SceneManager.LoadScene("level2");
+            SceneManager.LoadScene(scene);
         }
     }
 }
