@@ -10,6 +10,7 @@ public class AngelMovement : MonoBehaviour{
     public GameObject startPoint;
     public GameObject angelPoint;
     public GameObject Player;
+    [SerializeField] AudioSource audioOutputAngel;
 
     // Start is called before the first frame update
     void Start(){
@@ -24,6 +25,12 @@ public class AngelMovement : MonoBehaviour{
         rb.rotation = angle;
         direction.Normalize();
         movement = direction;
+        float distance = Vector3.Distance(player.position, transform.position);
+        if (distance < 20 && !audioOutputAngel.isPlaying) {
+            audioOutputAngel.Play(0);
+        } else if (distance > 25) {
+            audioOutputAngel.Pause();
+        }
     }
     private void FixedUpdate() {
         moveCharacter(movement);
