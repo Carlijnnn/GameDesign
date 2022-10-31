@@ -12,11 +12,11 @@ public class CameraRespawn : MonoBehaviour
 
     void Update()
     {
-        if (player.position.y > camera.position.y + 10)
+        if (player.position.y > camera.position.y + 13.5)
         {
             SceneManager.LoadScene("DropDownLevel");
         }
-        if (player.position.y < camera.position.y - 10)
+        if (player.position.y < camera.position.y - 13.5)
         {
             SceneManager.LoadScene("DropDownLevel");
         }
